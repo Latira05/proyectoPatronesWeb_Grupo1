@@ -16,15 +16,20 @@ public class Usuario  implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario")
-    private Long id_usuario;
+    private Long idUsuario;
     private String email;
     private String username;
     private String password;
+    private boolean activo;
 
     public Usuario(String email, String username, String password) {
         this.email = email;
         this.username = username;
         this.password = password;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
     
 

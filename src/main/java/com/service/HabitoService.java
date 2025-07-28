@@ -6,6 +6,7 @@ package com.service;
 
 import com.domain.Habito;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -26,7 +27,11 @@ public interface  HabitoService {
     public void save(Habito habito);
     
     // Se elimina el habito que tiene el id pasado por parámetro
-    public void delete(Habito habito);             
+    public void delete(Habito habito);  
+    
+    public void marcarComoCompletado(Long id);
+    public Map<String, Integer> obtenerResumenProgreso(Long idUsuario);
+
 }
 
 
