@@ -6,11 +6,9 @@ package com.dao;
 
 import com.domain.Habito;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author natha
- */
+@Repository
 public interface HabitoDao extends JpaRepository<Habito, Long> {
-    
 }
+

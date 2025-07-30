@@ -6,6 +6,7 @@ package com.service;
 
 import com.domain.Meta;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -27,6 +28,10 @@ public interface  MetaService {
     
     // Se elimina el meta que tiene el id pasado por parámetro
     public void delete(Meta meta);             
+
+    public void marcarComoCompletada(Long id);
+
+    public Map<String, Integer> obtenerResumenProgreso(Long idUsuario);
 }
 
 

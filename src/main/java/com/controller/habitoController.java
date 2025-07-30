@@ -10,6 +10,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/api/habitos")
@@ -40,4 +42,20 @@ public class habitoController {
         Map<String, Integer> resumen = habitoService.obtenerResumenProgreso(idUsuario);
         return ResponseEntity.ok(resumen);
     }
+    
+@GetMapping
+public ResponseEntity<List<Habito>> listarHabitos() {
+    List<Habito> habitos = habitoService.getHabito(false); // false = listar todos
+    return ResponseEntity.ok(habitos);
 }
+
+@DeleteMapping("/{id}")
+public ResponseEntity<String> eliminarHabito(@PathVariable Long id) {
+    Habito habito = new Habito();
+    habito.setId_habito(id);
+    habitoService.delete(habito);
+    return ResponseEntity.ok("Hábito eliminado correctamente");
+}
+
+}
+

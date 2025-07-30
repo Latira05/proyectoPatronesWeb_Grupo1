@@ -47,11 +47,11 @@ public class HabitoServiceImpl implements HabitoService {
         habitoDao.save(habito);
     }
 
-    @Override
-    @Transactional
-    public void delete(Habito habito) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+   @Override
+@Transactional
+public void delete(Habito habito) {
+    habitoDao.delete(habito); // 
+}
 
     @Override
     public void marcarComoCompletado(Long id) {

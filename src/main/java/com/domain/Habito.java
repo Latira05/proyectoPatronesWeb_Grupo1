@@ -42,7 +42,10 @@ public class Habito implements Serializable {
         this.hecho = hecho;
     }
 
-   
-                                
+   public Habito() {
+    
+}
+
+                               
     
 }

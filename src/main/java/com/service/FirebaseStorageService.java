@@ -18,7 +18,7 @@ public interface FirebaseStorageService {
     
     
     ////////////////////////////////////////////////////////
-    final String BucketName = "proyectog1-c7dc7-firebase-adminsdk-fbsvc-5d89ec44c1";
+    final String BucketName = "proyectog1-c7dc7-firebase-adminsdk-fbsvc-78f8288a21";
     ////////////////////////////////////////////////////////
     ///
     ///
@@ -31,6 +31,6 @@ public interface FirebaseStorageService {
     //El nombre del archivo Json
     
     //////////////////////////////////////////////////////////
-    final String archivoJsonFile = "proyectog1-c7dc7-firebase-adminsdk-fbsvc-5d89ec44c1";
+    final String archivoJsonFile = "proyectog1-c7dc7-firebase-adminsdk-fbsvc-78f8288a21";
     /////////////////////////////////////////////////////////
 }

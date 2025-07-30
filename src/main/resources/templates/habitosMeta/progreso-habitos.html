@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Progreso de Hábitos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Progreso de Hábitos</h1>
+    <canvas id="grafico" width="400" height="200"></canvas>
+
+    <script>
+        fetch("/api/habitos/progreso/1") // <-- Aquí pon el ID del usuario
+            .then(res => res.json())
+            .then(data => {
+                const labels = Object.keys(data);
+                const values = Object.values(data);
+
+                new Chart(document.getElementById("grafico"), {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Hábitos completados',
+                            data: values,
+                            backgroundColor: 'rgba(75, 192, 192, 0.5)'
+                        }]
+                    }
+                });
+            });
+    </script>
+</body>
+</html>
