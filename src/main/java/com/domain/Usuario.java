@@ -22,6 +22,9 @@ public class Usuario  implements Serializable  {
     private String password;
     private boolean activo;
 
+    
+    private List<UsuarioRol> roles;
+
     public Usuario(String email, String username, String password) {
         this.email = email;
         this.username = username;
